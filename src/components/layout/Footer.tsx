@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="py-20 bg-black border-t border-white/5">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-12 mb-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-20">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6 group">
               <div className="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center font-bold text-white text-xl">

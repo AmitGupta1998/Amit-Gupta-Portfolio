@@ -84,9 +84,17 @@ export function Navbar() {
                 {link.name}
               </a>
             ))}
-            <div className="flex gap-4 pt-4 border-t border-white/10">
-              <Github className="text-muted-foreground hover:text-white" />
-              <Linkedin className="text-muted-foreground hover:text-white" />
+            <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
+              <Button
+                className="rounded-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold w-full py-6"
+                onClick={() => setIsOpen(false)}
+              >
+                Hire Me
+              </Button>
+              <div className="flex gap-4">
+                <Github className="text-muted-foreground hover:text-white cursor-pointer" />
+                <Linkedin className="text-muted-foreground hover:text-white cursor-pointer" />
+              </div>
             </div>
           </motion.div>
         )}

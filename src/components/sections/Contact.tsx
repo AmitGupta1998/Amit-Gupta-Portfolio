@@ -12,14 +12,14 @@ export function ContactSection() {
       <div className="absolute top-1/2 left-0 w-full h-96 bg-brand-blue/5 blur-[150px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <Badge className="mb-6">Connect</Badge>
-            <h2 className="font-display text-5xl md:text-7xl font-bold text-white mb-8">
+            <h2 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-8">
               Let's Build <br /> Something <span className="text-brand-blue">Powerful</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-12 max-w-md">

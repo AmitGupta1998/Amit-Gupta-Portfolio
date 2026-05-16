@@ -118,8 +118,8 @@ export function ArchitectSuite() {
           </div>
 
           {/* Middle Column: Visual Core */}
-          <div className="lg:col-span-12 xl:col-span-5 order-first lg:order-none">
-            <div className="relative aspect-square glass rounded-[3rem] p-8 flex items-center justify-center border-white/10 overflow-hidden group">
+          <div className="lg:col-span-5 order-first lg:order-none">
+            <div className="relative aspect-square glass rounded-[3rem] p-4 sm:p-8 flex items-center justify-center border-white/10 overflow-hidden group max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none mx-auto">
               <div className="absolute inset-0 bg-glow-blue opacity-10 group-hover:opacity-20 transition-opacity" />
               
               {/* Spinning Rings */}
@@ -203,7 +203,7 @@ export function ArchitectSuite() {
           </div>
 
           {/* Right Column: Interactive Elements */}
-          <div className="lg:col-span-8 xl:col-span-3 space-y-6">
+          <div className="lg:col-span-3 space-y-6">
              <div className="glass-dark p-6 rounded-[2rem] border-white/5 space-y-8">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-brand-violet/10 text-brand-violet rounded-xl">

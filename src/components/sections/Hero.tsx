@@ -40,9 +40,9 @@ export function Hero() {
   }, [currentText, isDeleting, currentWordIndex, speed]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background Effects */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-blue/20 blur-[120px] rounded-full animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-violet/20 blur-[120px] rounded-full animate-pulse delay-1000" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-5 pointer-events-none" />
@@ -114,7 +114,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative w-full max-w-4xl"
+          className="relative w-full max-w-4xl mb-10"
         >
           <div className="relative aspect-video rounded-3xl overflow-hidden glass animate-float">
              <img 

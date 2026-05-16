@@ -8,10 +8,10 @@ export function ContentCreatorSection() {
   return (
     <section className="section-padding bg-zinc-900/40">
       <div className="container mx-auto px-4">
-        <div className="glass p-10 md:p-16 rounded-[3rem] relative overflow-hidden">
+        <div className="glass p-5 sm:p-8 lg:p-16 rounded-[2rem] lg:rounded-[3rem] relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 blur-[150px] rounded-full" />
-          
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
             <div>
                <Badge className="mb-4 bg-red-600/10 text-red-500 border-red-600/20">Community</Badge>
                <h2 className="font-display text-4xl md:text-6xl font-bold text-white mb-8">Empowering the <br /><span className="text-red-600">Dev Community</span></h2>
