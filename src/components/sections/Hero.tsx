@@ -148,15 +148,14 @@ export function Hero() {
 
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
                 <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-brand-blue/30 overflow-hidden mx-auto mb-4 bg-muted">
-                    <img 
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&h=200&auto=format&fit=crop" 
+                    <img
+                      src="https://purevitadrinks.com/amit-gupta-portfolio-2.png"
                       alt="Amit Gupta"
                       className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
                     />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-1">Amit Gupta</h3>
-                <p className="text-brand-blue text-sm">Senior Tech Consultant</p>
+                <p className="text-brand-blue text-sm">Website and Software Developer</p>
              </div>
           </div>
           

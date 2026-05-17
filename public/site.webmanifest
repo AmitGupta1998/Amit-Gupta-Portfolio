@@ -1,0 +1,17 @@
+{
+  "name": "Amit Gupta | Full Stack Developer",
+  "short_name": "Amit Gupta",
+  "description": "Full Stack Developer specializing in AI Automation, Google API integrations, and Payment Gateway solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

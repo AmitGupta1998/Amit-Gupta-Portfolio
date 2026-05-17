@@ -33,7 +33,7 @@ export function ContactSection() {
                  </div>
                  <div>
                    <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Email Me</p>
-                   <p className="text-xl font-bold text-white">hello@amitgupta.me</p>
+                   <p className="text-xl font-bold text-white">amitgupta1998@yahoo.com</p>
                  </div>
                </div>
 
@@ -42,8 +42,18 @@ export function ContactSection() {
                    <MessageCircle size={24} />
                  </div>
                  <div>
-                   <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">WhatsApp</p>
-                   <p className="text-xl font-bold text-white">+91 9999 0000 11</p>
+                   <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">WhatsApp / Phone</p>
+                   <p className="text-xl font-bold text-white">+91 9631116311</p>
+                 </div>
+               </div>
+
+               <div className="flex items-center gap-6 group">
+                 <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center text-violet-400 group-hover:bg-violet-400/10 transition-colors">
+                   <MapPin size={24} />
+                 </div>
+                 <div>
+                   <p className="text-xs text-muted-foreground uppercase tracking-widest mb-1">Location</p>
+                   <p className="text-xl font-bold text-white">Gurgaon, India</p>
                  </div>
                </div>
 
