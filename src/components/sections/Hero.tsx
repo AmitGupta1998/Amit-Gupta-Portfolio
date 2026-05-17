@@ -93,19 +93,36 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mb-20 w-full"
         >
-          <Button size="lg" className="rounded-full px-8 py-7 text-lg bg-brand-blue hover:bg-brand-blue/90 text-white group w-full sm:w-auto font-bold shadow-lg shadow-brand-blue/20 border-none">
-            Hire Me <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full px-8 py-7 text-lg border-brand-blue/30 text-brand-blue bg-brand-blue/5 hover:bg-brand-blue hover:text-white w-full sm:w-auto font-bold transition-all">
-            View Projects
-          </Button>
+          <a
+            href="https://wa.me/919631116311?text=Hi%20Amit%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20software%20project.%20Could%20you%20please%20share%20your%20availability%20and%20a%20quote%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <Button size="lg" className="rounded-full px-8 py-7 text-lg bg-brand-blue hover:bg-brand-blue/90 text-white group w-full font-bold shadow-lg shadow-brand-blue/20 border-none">
+              Hire Me <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </a>
+          <a href="#projects" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="rounded-full px-8 py-7 text-lg border-brand-blue/30 text-brand-blue bg-brand-blue/5 hover:bg-brand-blue hover:text-white w-full font-bold transition-all">
+              View Projects
+            </Button>
+          </a>
           <div className="flex gap-4 w-full sm:w-auto justify-center mt-2 sm:mt-0">
-            <Button size="icon" variant="ghost" className="rounded-full w-14 h-14 bg-green-500/10 text-green-500 hover:bg-green-500/20 border border-green-500/20" title="WhatsApp">
-              <MessageSquare size={24} />
-            </Button>
-            <Button size="icon" variant="ghost" className="rounded-full w-14 h-14 bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20 border border-brand-blue/20" title="Book Consultation">
-              <Calendar size={24} />
-            </Button>
+            <a
+              href="https://wa.me/919631116311?text=Hi%20Amit%2C%20I%20want%20to%20discuss%20a%20project%20with%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="icon" variant="ghost" className="rounded-full w-14 h-14 bg-green-500/10 text-green-500 hover:bg-green-500/20 border border-green-500/20" title="WhatsApp">
+                <MessageSquare size={24} />
+              </Button>
+            </a>
+            <a href="#contact" >
+              <Button size="icon" variant="ghost" className="rounded-full w-14 h-14 bg-brand-blue/10 text-brand-blue hover:bg-brand-blue/20 border border-brand-blue/20" title="Book Consultation">
+                <Calendar size={24} />
+              </Button>
+            </a>
           </div>
         </motion.div>
 
@@ -118,7 +135,7 @@ export function Hero() {
         >
           <div className="relative aspect-video rounded-3xl overflow-hidden glass animate-float">
              <img 
-               src="https://picsum.photos/seed/developer-workspace/1200/800" 
+               src="https://purevitadrinks.com/background-image.png" 
                alt="Amit Gupta's Workspace" 
                className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:opacity-80 transition-opacity"
                referrerPolicy="no-referrer"
@@ -126,24 +143,34 @@ export function Hero() {
              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
              
              {/* Floating Mini Cards */}
-             <div className="absolute top-10 right-10 p-4 glass-dark rounded-2xl hidden md:block">
-               <div className="flex items-center gap-3">
-                 <div className="p-2 bg-yellow-500/20 text-yellow-500 rounded-lg"><Star size={20} /></div>
+             <div className="absolute top-10 right-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px]">
+               <div className="flex items-center gap-3 mb-2">
+                 <div className="p-2 bg-yellow-500/20 text-yellow-500 rounded-lg"><Star size={18} className="fill-yellow-400" /></div>
                  <div className="text-left">
-                   <p className="text-white font-bold">4.9/5</p>
-                   <p className="text-xs text-muted-foreground">Client Rating</p>
+                   <p className="text-white font-bold text-lg leading-none">4.9 / 5</p>
+                   <p className="text-xs text-muted-foreground mt-0.5">Client Rating</p>
                  </div>
                </div>
+               <div className="flex gap-0.5 mt-1">
+                 {[...Array(5)].map((_, i) => (
+                   <div key={i} className={`h-1 rounded-full flex-1 ${i < 5 ? "bg-yellow-400" : "bg-white/10"}`} />
+                 ))}
+               </div>
+               <p className="text-[10px] text-muted-foreground mt-1.5">Based on 250+ projects</p>
              </div>
-             
-             <div className="absolute bottom-10 left-10 p-4 glass-dark rounded-2xl hidden md:block">
-               <div className="flex items-center gap-3">
-                 <div className="p-2 bg-blue-500/20 text-blue-500 rounded-lg"><CheckCircle2 size={20} /></div>
+
+             <div className="absolute bottom-10 left-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px]">
+               <div className="flex items-center gap-3 mb-2">
+                 <div className="p-2 bg-blue-500/20 text-blue-500 rounded-lg"><CheckCircle2 size={18} /></div>
                  <div className="text-left">
-                   <p className="text-white font-bold">100+</p>
-                   <p className="text-xs text-muted-foreground">Projects Delivered</p>
+                   <p className="text-white font-bold text-lg leading-none">250+</p>
+                   <p className="text-xs text-muted-foreground mt-0.5">Projects Delivered</p>
                  </div>
                </div>
+               <div className="w-full bg-white/10 rounded-full h-1 mt-1">
+                 <div className="bg-brand-blue h-1 rounded-full w-[92%]" />
+               </div>
+               <p className="text-[10px] text-muted-foreground mt-1.5">92% on-time delivery rate</p>
              </div>
 
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
@@ -155,7 +182,8 @@ export function Hero() {
                     />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-1">Amit Gupta</h3>
-                <p className="text-brand-blue text-sm">Website and Software Developer</p>
+                <p className="text-brand-blue text-sm font-medium">Website & Software Developer</p>
+                <p className="text-white/50 text-xs mt-1 tracking-wide">AI Automation · Google Expert · Full Stack</p>
              </div>
           </div>
           

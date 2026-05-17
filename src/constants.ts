@@ -49,34 +49,41 @@ export const PROJECTS: Project[] = [
 
 export const SKILLS: Skill[] = [
   { name: "Laravel", level: 95, icon: "laravel", category: "Backend" },
-  { name: "Android (Kotlin)", level: 90, icon: "android", category: "Mobile" },
+  { name: "PHP", level: 93, icon: "php", category: "Backend" },
+  { name: "Android / Flutter", level: 90, icon: "android", category: "Mobile · Kotlin & Flutter" },
   { name: "Next.js / React", level: 85, icon: "react", category: "Frontend" },
   { name: "AI Automation", level: 88, icon: "bot", category: "AI" },
   { name: "Google APIs", level: 92, icon: "google", category: "Integrations" },
   { name: "Firebase", level: 90, icon: "flame", category: "Backend" },
   { name: "MySQL / PostgreSQL", level: 95, icon: "database", category: "Database" },
-  { name: "Docker / AWS", level: 80, icon: "server", category: "DevOps" }
+  { name: "WordPress", level: 88, icon: "wordpress", category: "CMS" },
+  { name: "Shopify", level: 82, icon: "shopify", category: "E-Commerce" },
+  { name: "Docker / AWS", level: 80, icon: "server", category: "DevOps" },
+  { name: "REST API / GraphQL", level: 92, icon: "api", category: "Integrations" }
 ];
 
 export const SERVICES: Service[] = [
   {
     title: "Full Stack SaaS Development",
     description: "End-to-end scalable web applications built with Laravel & Next.js.",
-    price: "Starts at $5,000",
+    price: "Starts at ₹2,50,000 (~$3,000)",
+    hourlyRate: "₹2,000/hr (~$24/hr)",
     timeline: "4-12 Weeks",
     features: ["Custom Architecture", "Payment Gateway", "Admin Panel", "API Integration"]
   },
   {
     title: "Android App Development",
     description: "Native performance and sleek design with Kotlin and Firebase.",
-    price: "Starts at $3,500",
+    price: "Starts at ₹1,50,000 (~$1,800)",
+    hourlyRate: "₹1,800/hr (~$22/hr)",
     timeline: "6-10 Weeks",
     features: ["Play Store Deployment", "Offline Mode", "Push Notifications", "Cloud Sync"]
   },
   {
     title: "AI & Automation Solutions",
     description: "Supercharge your business with AI workflows and automation bots.",
-    price: "Starts at $2,000",
+    price: "Starts at ₹75,000 (~$900)",
+    hourlyRate: "₹2,500/hr (~$30/hr)",
     timeline: "2-4 Weeks",
     features: ["LLM Integration", "Workflow Automation", "Chatbots", "Data Extraction"]
   }

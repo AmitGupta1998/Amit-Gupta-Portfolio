@@ -48,12 +48,18 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <Button 
-            variant="outline" 
-            className="rounded-full border-brand-blue text-brand-blue bg-transparent hover:bg-brand-blue hover:text-white px-6 border-2 font-bold transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+          <a
+            href="https://wa.me/919631116311?text=Hi%20Amit%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20software%20project.%20Could%20you%20please%20share%20your%20availability%20and%20a%20quote%3F"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Hire Me
-          </Button>
+            <Button
+              variant="outline"
+              className="rounded-full border-brand-blue text-brand-blue bg-transparent hover:bg-brand-blue hover:text-white px-6 border-2 font-bold transition-all duration-300 shadow-[0_0_15px_rgba(59,130,246,0.2)]"
+            >
+              Hire Me
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -85,15 +91,23 @@ export function Navbar() {
               </a>
             ))}
             <div className="pt-4 border-t border-white/10 flex flex-col gap-4">
-              <Button
-                className="rounded-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold w-full py-6"
+              <a
+                href="https://wa.me/919631116311?text=Hi%20Amit%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20software%20project.%20Could%20you%20please%20share%20your%20availability%20and%20a%20quote%3F"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
               >
-                Hire Me
-              </Button>
+                <Button className="rounded-full bg-brand-blue hover:bg-brand-blue/90 text-white font-bold w-full py-6">
+                  Hire Me
+                </Button>
+              </a>
               <div className="flex gap-4">
-                <Github className="text-muted-foreground hover:text-white cursor-pointer" />
-                <Linkedin className="text-muted-foreground hover:text-white cursor-pointer" />
+                <a href="https://github.com/AmitGupta1998" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <Github className="text-muted-foreground hover:text-white cursor-pointer" />
+                </a>
+                <a href="https://www.linkedin.com/in/amit-gupta-developer" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <Linkedin className="text-muted-foreground hover:text-white cursor-pointer" />
+                </a>
               </div>
             </div>
           </motion.div>

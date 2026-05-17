@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { SERVICES } from "@/constants";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, Clock } from "lucide-react";
 
 export function ServicesSection() {
   return (
@@ -36,9 +36,13 @@ export function ServicesSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
               </div>
 
-              <div className="mb-8">
-                 <p className="text-3xl font-display font-bold text-white mb-1">{service.price}</p>
-                 <p className="text-xs text-brand-blue font-mono uppercase tracking-widest">{service.timeline}</p>
+              <div className="mb-8 space-y-3">
+                <p className="text-3xl font-display font-bold text-white">{service.price}</p>
+                <p className="text-xs text-brand-blue font-mono uppercase tracking-widest">{service.timeline}</p>
+                <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold border ${i === 1 ? "bg-brand-blue/15 border-brand-blue/40 text-brand-blue" : "bg-white/5 border-white/10 text-white/60"}`}>
+                  <Clock size={11} />
+                  {service.hourlyRate}
+                </div>
               </div>
 
               <div className="space-y-4 mb-10 flex-1">

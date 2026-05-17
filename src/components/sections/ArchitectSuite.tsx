@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Terminal, Cpu, Globe, Zap, Shield, Database, Code2, LineChart, Activity, Command, Smartphone } from "lucide-react";
+import { Cpu, Globe, Zap, Shield, Database, Code2, LineChart, Activity, Command, Smartphone } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const LOG_MESSAGES = [
@@ -16,7 +16,7 @@ const LOG_MESSAGES = [
 
 export function ArchitectSuite() {
   const [logs, setLogs] = useState<string[]>([]);
-  const [activeTab, setActiveTab] = useState<"system" | "network" | "vault">("system");
+  const [_activeTab, _setActiveTab] = useState<"system" | "network" | "vault">("system");
 
   useEffect(() => {
     let index = 0;
@@ -138,7 +138,7 @@ export function ArchitectSuite() {
               <div className="relative z-10 text-center space-y-6">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white/10 overflow-hidden mx-auto shadow-2xl relative">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop" 
+                    src="https://purevitadrinks.com/amit-gupta-portfolio-2.png" 
                     alt="Amit Gupta"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                     referrerPolicy="no-referrer"
@@ -218,7 +218,7 @@ export function ArchitectSuite() {
                     { label: "Backend", desc: "Laravel, Node, Go", icon: Zap },
                     { label: "Mobile", desc: "Kotlin, Flutter", icon: Smartphone },
                     { label: "Automation", desc: "Python, AI Agents", icon: Cpu },
-                  ].map((cap, i) => (
+                  ].map((cap) => (
                     <motion.div
                       key={cap.label}
                       whileHover={{ x: 10 }}

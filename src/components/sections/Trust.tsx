@@ -4,19 +4,19 @@ import { Globe2, Package, Award, Users } from "lucide-react";
 
 export function TrustSection() {
   const stats = [
-    { label: "Global Clients", value: "50+", icon: Globe2, color: "text-blue-500" },
-    { label: "Projects Completed", value: "100+", icon: Package, color: "text-violet-500" },
+    { label: "Global Clients", value: "60+", icon: Globe2, color: "text-blue-500" },
+    { label: "Projects Completed", value: "250+", icon: Package, color: "text-violet-500" },
     { label: "Success Rate", value: "99%", icon: Award, color: "text-green-500" },
-    { label: "Happy Clients", value: "40+", icon: Users, color: "text-cyan-500" },
+    { label: "Happy Clients", value: "55+", icon: Users, color: "text-cyan-500" },
   ];
 
   const countries = [
-    { name: "Australia", flag: "🇦🇺" },
-    { name: "Germany", flag: "🇩🇪" },
-    { name: "India", flag: "🇮🇳" },
-    { name: "USA", flag: "🇺🇸" },
-    { name: "UK", flag: "🇬🇧" },
-    { name: "Global Remote", flag: "🌐" },
+    { name: "India",         code: "in" },
+    { name: "Australia",     code: "au" },
+    { name: "USA",           code: "us" },
+    { name: "Germany",       code: "de" },
+    { name: "UK",            code: "gb" },
+    { name: "UAE",           code: "ae" },
   ];
 
   return (
@@ -25,11 +25,22 @@ export function TrustSection() {
         <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-10 mb-16 md:mb-20 opacity-60">
           <p className="w-full text-center text-sm uppercase tracking-[0.2em] font-medium mb-4">Trusted By Businesses From</p>
           {countries.map((c) => (
-            <div key={c.name} className="flex items-center gap-2 text-lg font-medium px-4 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-default">
-              <span>{c.flag}</span>
+            <div key={c.name} className="flex items-center gap-2.5 text-base font-medium px-4 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-default">
+              <img
+                src={`https://flagcdn.com/w40/${c.code}.png`}
+                srcSet={`https://flagcdn.com/w80/${c.code}.png 2x`}
+                width={24}
+                height={18}
+                alt={c.name}
+                className="rounded-sm object-cover shadow-sm"
+              />
               <span>{c.name}</span>
             </div>
           ))}
+          <div className="flex items-center gap-2.5 text-base font-medium px-4 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-default">
+            <Globe2 size={22} className="text-brand-blue" />
+            <span>Global Remote</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

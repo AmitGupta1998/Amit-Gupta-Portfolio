@@ -22,6 +22,7 @@ export interface Service {
   title: string;
   description: string;
   price: string;
+  hourlyRate: string;
   timeline: string;
   features: string[];
 }
