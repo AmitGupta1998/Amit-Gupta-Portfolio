@@ -3,47 +3,69 @@ import { Project, Skill, Service } from "./types";
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "Global Supply Chain SaaS",
-    description: "A comprehensive Laravel-based ERP for international logistics with real-time tracking.",
-    image: "https://picsum.photos/seed/logistics/800/600",
-    tags: ["Laravel", "MySQL", "Vue.js", "Redis"],
-    category: "SaaS",
-    results: "Reduced shipping overhead by 25% for 100+ clients.",
+    title: "VelqIp — Grocery Delivery App",
+    description: "A nutrition & wellness focused grocery delivery app — browse fresh produce, track macros, and get healthy groceries delivered to your door with real-time order tracking.",
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&h=600&fit=crop&auto=format",
+    tags: ["Android", "Kotlin", "Firebase", "Laravel"],
+    category: "Android",
+    results: "Live on Play Store — delivering nutrition-focused groceries with real-time tracking.",
     country: "Australia 🇦🇺",
-    demo: "#"
+    demo: "https://play.google.com/store/apps/details?id=com.velqip.mobile"
   },
   {
     id: "2",
-    title: "AI Voice Automation Bot",
-    description: "Automated customer support system using OpenAI API and Python for a real estate firm.",
-    image: "https://picsum.photos/seed/ai-bot/800/600",
-    tags: ["OpenAI", "Python", "FastAPI", "React"],
+    title: "Algo Trading Automation System",
+    description: "Fully automated algorithmic trading platform with backtesting engine, real-time signal execution, risk management rules, and a live performance dashboard.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&auto=format",
+    tags: ["Python", "FastAPI", "React", "Backtrader"],
     category: "AI Automation",
-    results: "Handled 10,000+ monthly calls with 95% accuracy.",
+    results: "Automated trade execution with backtested strategy validation across historical market data.",
     country: "Germany 🇩🇪",
-    github: "#"
+    demo: "#"
   },
   {
     id: "3",
-    title: "EcoTrack Android App",
-    description: "Native Kotlin app for tracking carbon footprint with Firebase integration.",
-    image: "https://picsum.photos/seed/eco/800/600",
-    tags: ["Kotlin", "Firebase", "Google Maps API"],
+    title: "Indian Market E-Commerce App",
+    description: "Full-featured Android e-commerce app built for the Indian market — multi-vendor support, UPI & COD payments, regional language UI, and real-time order tracking.",
+    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&h=600&fit=crop&auto=format",
+    tags: ["Kotlin", "Firebase", "Laravel", "Razorpay"],
     category: "Android",
-    results: "100k+ downloads on Play Store with 4.8 rating.",
+    results: "End-to-end shopping experience with UPI payments and multi-vendor storefront.",
+    country: "India 🇮🇳",
+    demo: "#"
+  },
+  {
+    id: "6",
+    title: "Doctor Appointment Booking System",
+    description: "Role-based Laravel web app for clinics — patients book appointments online, doctors manage schedules & prescriptions, and admins oversee the entire clinic via a dedicated panel. REST API included for mobile integration.",
+    image: "https://images.unsplash.com/photo-1584467735871-8e85353a8413?w=800&h=600&fit=crop&auto=format",
+    tags: ["Laravel", "REST API", "Role-Based Auth", "MySQL"],
+    category: "Laravel",
+    results: "Streamlined appointment scheduling for patients, doctors, and clinic admins under one platform.",
+    country: "India 🇮🇳",
+    demo: "#"
+  },
+  {
+    id: "5",
+    title: "Solar Energy Panel — Gujarat",
+    description: "Full e-commerce selling website for a Gujarat-based solar energy company — online product sales, rooftop solar calculator, government subsidy info, quote requests, and secure checkout.",
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop&auto=format",
+    tags: ["WordPress", "WooCommerce", "Elementor", "Razorpay"],
+    category: "WordPress",
+    results: "End-to-end solar panel selling platform driving online orders and qualified leads across Gujarat.",
     country: "India 🇮🇳",
     demo: "#"
   },
   {
     id: "4",
-    title: "FinTech Admin Dashboard",
-    description: "High-security admin panel for managing cross-border transactions and user verification.",
-    image: "https://picsum.photos/seed/fintech/800/600",
-    tags: ["Laravel", "Livewire", "Tailwind", "PostgreSQL"],
-    category: "Full Stack",
-    results: "Secured transactions worth $50M annually.",
-    country: "USA 🇺🇸",
-    demo: "#"
+    title: "Earnmet — SaaS Digital Marketplace",
+    description: "Multilanguage & multi-tenant SaaS platform for selling digital products and services. Sellers can list products, manage storefronts, and serve global customers from a single platform.",
+    image: "https://images.unsplash.com/photo-1661956602868-6ae368943878?w=800&h=600&fit=crop&auto=format",
+    tags: ["Laravel", "Multi-Tenant", "Multilanguage", "SaaS", "Digital Products"],
+    category: "SaaS",
+    results: "Live production platform powering digital product & service sellers across multiple regions.",
+    country: "India 🇮🇳",
+    demo: "https://earnmet.in/"
   }
 ];
 

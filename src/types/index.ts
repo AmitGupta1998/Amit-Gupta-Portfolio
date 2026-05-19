@@ -4,7 +4,7 @@ export interface Project {
   description: string;
   image: string;
   tags: string[];
-  category: "Laravel" | "Android" | "AI Automation" | "Full Stack" | "SaaS";
+  category: "Laravel" | "Android" | "AI Automation" | "Full Stack" | "SaaS" | "WordPress";
   results: string;
   country?: string;
   github?: string;

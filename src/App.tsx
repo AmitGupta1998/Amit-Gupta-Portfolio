@@ -22,6 +22,7 @@ import { ServicesSection } from "@/components/sections/Services";
 import { ArchitectSuite } from "@/components/sections/ArchitectSuite";
 import { TestimonialsSection } from "@/components/sections/Testimonials";
 import { ContentCreatorSection } from "@/components/sections/ContentCreator";
+import { CertificationsSection } from "@/components/sections/Certifications";
 import { ContactSection } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
 import { CursorGlow } from "@/components/ui/CursorGlow";
@@ -82,6 +83,7 @@ export default function App() {
         <AndroidSection />
         <ServicesSection />
         <TestimonialsSection />
+        <CertificationsSection />
         <ContentCreatorSection />
         <ContactSection />
       </main>
