@@ -162,7 +162,7 @@ export function ArchitectSuite() {
 
                 <div className="flex justify-center gap-6">
                   <div className="text-center">
-                    <p className="text-2xl font-bold text-white">8+</p>
+                    <p className="text-2xl font-bold text-white">5+</p>
                     <p className="text-[10px] text-muted-foreground uppercase opacity-60">Years Exp</p>
                   </div>
                   <div className="w-px h-10 bg-white/10" />
