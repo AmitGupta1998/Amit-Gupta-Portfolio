@@ -138,7 +138,7 @@ export function ArchitectSuite() {
               <div className="relative z-10 text-center space-y-6">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white/10 overflow-hidden mx-auto shadow-2xl relative">
                   <img 
-                    src="https://purevitadrinks.com/amit-gupta-portfolio-2.png" 
+                    src="https://api.dareloop.app/amit-gupta-portfolio-2.png" 
                     alt="Amit Gupta"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                     referrerPolicy="no-referrer"

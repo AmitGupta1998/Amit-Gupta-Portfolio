@@ -135,7 +135,7 @@ export function Hero() {
         >
           <div className="relative aspect-video rounded-3xl overflow-hidden glass animate-float">
              <img 
-               src="https://purevitadrinks.com/background-image.png" 
+               src="https://api.dareloop.app/background-image.png" 
                alt="Amit Gupta's Workspace" 
                className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:opacity-80 transition-opacity"
                referrerPolicy="no-referrer"
@@ -176,7 +176,7 @@ export function Hero() {
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
                 <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-brand-blue/30 overflow-hidden mx-auto mb-4 bg-muted">
                     <img
-                      src="https://purevitadrinks.com/amit-gupta-portfolio-2.png"
+                      src="https://api.dareloop.app/amit-gupta-portfolio-2.png"
                       alt="Amit Gupta"
                       className="w-full h-full object-cover"
                     />
