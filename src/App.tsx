@@ -9,6 +9,7 @@
  */
 
 import React, { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { TrustSection } from "@/components/sections/Trust";
@@ -89,6 +90,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <Analytics />
     </div>
   );
 }
