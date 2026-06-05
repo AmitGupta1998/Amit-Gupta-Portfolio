@@ -24,6 +24,7 @@ import { TestimonialsSection } from "@/components/sections/Testimonials";
 import { ContentCreatorSection } from "@/components/sections/ContentCreator";
 import { CertificationsSection } from "@/components/sections/Certifications";
 import { ContactSection } from "@/components/sections/Contact";
+import { DeveloperMindSection } from "@/components/sections/DeveloperMind";
 import { Footer } from "@/components/layout/Footer";
 import { CursorGlow } from "@/components/ui/CursorGlow";
 import { useScrollProgress } from "@/hooks";
@@ -74,6 +75,7 @@ export default function App() {
       <main>
         <Hero />
         <TrustSection />
+        <DeveloperMindSection />
         <AboutSection />
         <SkillsSection />
         <ProjectShowcase />
