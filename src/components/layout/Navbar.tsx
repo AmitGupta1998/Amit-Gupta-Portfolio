@@ -54,7 +54,7 @@ export function Navbar() {
             A
           </div>
           <span className="font-display font-bold text-lg hidden sm:block tracking-tight">
-            Amit Gupta
+            Amit Dev
           </span>
         </a>
 

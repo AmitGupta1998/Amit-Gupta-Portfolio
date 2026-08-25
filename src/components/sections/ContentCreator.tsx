@@ -4,7 +4,7 @@ import { Youtube, TrendingUp, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-const CHANNEL_URL = "https://www.youtube.com/@CodeWithCodeOfficial";
+const CHANNEL_URL = "https://www.youtube.com/@DeveloperBiharWala";
 
 function LiveCounter() {
   const [count, setCount] = React.useState(87);

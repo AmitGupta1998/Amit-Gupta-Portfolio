@@ -111,7 +111,7 @@ export function ContactSection() {
                 {[
                   { href: "https://www.linkedin.com/in/amit-gupta-developer", icon: Linkedin, label: "LinkedIn" },
                   { href: "https://github.com/AmitGupta1998",                  icon: Github,   label: "GitHub" },
-                  { href: "https://www.youtube.com/@CodeWithCodeOfficial",     icon: Youtube,  label: "YouTube" },
+                  { href: "https://www.youtube.com/@DeveloperBiharWala",       icon: Youtube,  label: "YouTube" },
                   { href: "https://x.com/AMIT5097",                            icon: Twitter,  label: "X" },
                   { href: "https://www.facebook.com/codewithcode",             icon: Facebook, label: "Facebook" },
                 ].map(({ href, icon: Icon, label }) => (

@@ -11,7 +11,7 @@ const LOG_MESSAGES = [
   "Optimizing Google Cloud Handlers...",
   "Securing Authentication Vaults...",
   "Mapping Global Client Network...",
-  "System Ready. Amit Gupta is Online.",
+  "System Ready. Amit Dev is Online.",
 ];
 
 export function ArchitectSuite() {
@@ -139,7 +139,7 @@ export function ArchitectSuite() {
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-white/10 overflow-hidden mx-auto shadow-2xl relative">
                   <img 
                     src="https://api.dareloop.app/amit-gupta-portfolio-2.png" 
-                    alt="Amit Gupta"
+                    alt="Amit Dev"
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
@@ -154,7 +154,7 @@ export function ArchitectSuite() {
                 </div>
                 
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">Amit Gupta</h3>
+                  <h3 className="text-3xl font-bold text-white mb-2">Amit Dev</h3>
                   <Badge variant="outline" className="text-brand-blue border-brand-blue/30 px-6 py-1 rounded-full uppercase tracking-tighter bg-brand-blue/5">
                     Authorized Architect
                   </Badge>

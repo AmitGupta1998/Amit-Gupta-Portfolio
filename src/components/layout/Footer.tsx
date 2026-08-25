@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 const socialLinks = [
   { Icon: Github, href: "https://github.com/AmitGupta1998", label: "GitHub" },
   { Icon: Linkedin, href: "https://www.linkedin.com/in/amit-gupta-developer", label: "LinkedIn" },
-  { Icon: Youtube, href: "https://www.youtube.com/@CodeWithCodeOfficial", label: "YouTube" },
+  { Icon: Youtube, href: "https://www.youtube.com/@DeveloperBiharWala", label: "YouTube" },
   { Icon: Twitter, href: "https://x.com/AMIT5097", label: "X (Twitter)" },
   { Icon: Facebook, href: "https://www.facebook.com/codewithcode", label: "Facebook" },
 ];
@@ -23,7 +23,7 @@ export function Footer() {
                 A
               </div>
               <span className="font-display font-bold text-2xl tracking-tight text-white">
-                Amit Gupta
+                Amit Dev
               </span>
             </div>
             <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
@@ -78,7 +78,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Amit Gupta. All rights reserved.
+            © {currentYear} Amit Dev. All rights reserved.
           </p>
           
           <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5">
