@@ -308,7 +308,7 @@ export function CertificationsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-10"
         >
           <Badge className="mb-4 bg-brand-violet/10 text-brand-violet border-brand-violet/20">
             <Award size={12} className="mr-1" /> Certifications

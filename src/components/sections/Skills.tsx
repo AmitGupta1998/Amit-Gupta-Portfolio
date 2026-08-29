@@ -11,7 +11,7 @@ export function SkillsSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-glow-violet opacity-30 pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <Badge className="mb-4 bg-brand-violet/10 text-brand-violet border-brand-violet/20">Expertise</Badge>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mb-6">Mastering the Tech Stack</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

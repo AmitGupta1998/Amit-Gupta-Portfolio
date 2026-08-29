@@ -119,7 +119,7 @@ export function TestimonialsSection() {
     <section className="section-padding bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-glow-blue opacity-10 pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10 mb-14 text-center">
+      <div className="container mx-auto px-4 relative z-10 mb-10 text-center">
         <Badge className="mb-4">Testimonials</Badge>
         <h2 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
           Client <span className="text-brand-blue">Success</span> Stories

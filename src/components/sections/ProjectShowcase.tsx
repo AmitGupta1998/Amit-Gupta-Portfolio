@@ -17,7 +17,7 @@ export function ProjectShowcase() {
   return (
     <section id="projects" className="section-padding bg-black/20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-8">
           <div className="text-left">
             <Badge className="mb-4">Portfolio</Badge>
             <h2 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">Case Studies</h2>

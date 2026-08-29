@@ -14,9 +14,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-20 bg-black border-t border-white/5">
+    <footer className="py-14 md:py-16 bg-black border-t border-white/5">
       <div className="container mx-auto px-4">
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16 md:mb-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6 group">
               <div className="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center font-bold text-white text-xl">
@@ -36,6 +36,26 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Badge is displayed unaltered per Hostinger brand guidelines: no
+                recolouring, cropping, or non-proportional scaling. */}
+            <a
+              href="https://www.hostinger.com/"
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              aria-label="Hostinger Partner — visit Hostinger"
+              className="mt-8 inline-block rounded-lg p-2 -m-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+            >
+              <img
+                src="/hostinger-partner-badge/svg/Badge_dark.svg"
+                alt="Hostinger Partner"
+                width={128}
+                height={48}
+                loading="lazy"
+                decoding="async"
+                className="w-32 h-auto"
+              />
+            </a>
           </div>
 
           <div>
@@ -78,7 +98,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Amit Dev. All rights reserved.
+            © {currentYear} Developer Bihar wala. All rights reserved.
           </p>
           
           <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5">
@@ -87,7 +107,7 @@ export function Footer() {
           </div>
           
           <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-            Built with <Heart size={14} className="text-red-500 fill-red-500" /> & Modern Tech
+            Built with <Heart size={14} className="text-red-500 fill-red-500" /> & Developer Bihar wala
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useMotionValue, useTransform, useSpring, useMotionTemplate } from "motion/react";
 import { ArrowRight, MessageSquare, Phone, Calendar, CheckCircle2, Globe, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +38,41 @@ export function Hero() {
     const timer = setTimeout(handleTyping, speed);
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, currentWordIndex, speed]);
+
+  // 3D tilt interaction for the hero card
+  const cardRef = useRef<HTMLDivElement>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [14, -14]), {
+    stiffness: 200,
+    damping: 25,
+    mass: 0.5,
+  });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-14, 14]), {
+    stiffness: 200,
+    damping: 25,
+    mass: 0.5,
+  });
+
+  const glareX = useTransform(mouseX, [-0.5, 0.5], [0, 100]);
+  const glareY = useTransform(mouseY, [-0.5, 0.5], [0, 100]);
+  const glareBackground = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.18), transparent 55%)`;
+
+  const shadowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [24, -24]), { stiffness: 200, damping: 25 });
+  const shadowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [24, -24]), { stiffness: 200, damping: 25 });
+
+  const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = cardRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    mouseX.set((e.clientX - rect.left) / rect.width - 0.5);
+    mouseY.set((e.clientY - rect.top) / rect.height - 0.5);
+  };
+
+  const handleCardMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20">
@@ -91,7 +126,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mb-20 w-full"
+          className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mb-12 w-full"
         >
           <a
             href="https://wa.me/919631116311?text=Hi%20Amit%2C%20I%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20software%20project.%20Could%20you%20please%20share%20your%20availability%20and%20a%20quote%3F"
@@ -126,67 +161,107 @@ export function Hero() {
           </div>
         </motion.div>
 
-        {/* Hero Image / Badge Cloud */}
+        {/* Hero Image / Badge Cloud - Interactive 3D Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative w-full max-w-4xl mb-10"
         >
-          <div className="relative aspect-video rounded-3xl overflow-hidden glass animate-float">
-             <img 
-               src="https://api.dareloop.app/background-image.png" 
-               alt="Amit Dev's Workspace"
-               className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:opacity-80 transition-opacity"
-               referrerPolicy="no-referrer"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-             
-             {/* Floating Mini Cards */}
-             <div className="absolute top-10 right-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px]">
-               <div className="flex items-center gap-3 mb-2">
-                 <div className="p-2 bg-yellow-500/20 text-yellow-500 rounded-lg"><Star size={18} className="fill-yellow-400" /></div>
-                 <div className="text-left">
-                   <p className="text-white font-bold text-lg leading-none">4.9 / 5</p>
-                   <p className="text-xs text-muted-foreground mt-0.5">Client Rating</p>
-                 </div>
-               </div>
-               <div className="flex gap-0.5 mt-1">
-                 {[...Array(5)].map((_, i) => (
-                   <div key={i} className={`h-1 rounded-full flex-1 ${i < 5 ? "bg-yellow-400" : "bg-white/10"}`} />
-                 ))}
-               </div>
-               <p className="text-[10px] text-muted-foreground mt-1.5">Based on 250+ projects</p>
-             </div>
+          <div
+            ref={cardRef}
+            onMouseMove={handleCardMouseMove}
+            onMouseLeave={handleCardMouseLeave}
+            className="relative"
+            style={{ perspective: "1800px" }}
+          >
+            {/* Reactive ambient shadow beneath the card */}
+            <motion.div
+              className="absolute -inset-6 rounded-[2.5rem] bg-brand-blue/30 blur-3xl opacity-40 -z-10 pointer-events-none"
+              style={{ x: shadowX, y: shadowY }}
+            />
 
-             <div className="absolute bottom-10 left-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px]">
-               <div className="flex items-center gap-3 mb-2">
-                 <div className="p-2 bg-blue-500/20 text-blue-500 rounded-lg"><CheckCircle2 size={18} /></div>
-                 <div className="text-left">
-                   <p className="text-white font-bold text-lg leading-none">250+</p>
-                   <p className="text-xs text-muted-foreground mt-0.5">Projects Delivered</p>
-                 </div>
-               </div>
-               <div className="w-full bg-white/10 rounded-full h-1 mt-1">
-                 <div className="bg-brand-blue h-1 rounded-full w-[92%]" />
-               </div>
-               <p className="text-[10px] text-muted-foreground mt-1.5">92% on-time delivery rate</p>
-             </div>
+            {/* Animated gradient glow border */}
+            <div className="absolute -inset-[2px] rounded-3xl bg-gradient-to-r from-brand-blue via-brand-violet to-brand-cyan opacity-60 blur-md animate-pulse -z-10 pointer-events-none" />
 
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center pointer-events-none">
-                <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-brand-blue/30 overflow-hidden mx-auto mb-4 bg-muted">
-                    <img
-                      src="https://api.dareloop.app/amit-gupta-portfolio-2.png"
-                      alt="Amit Dev"
-                      className="w-full h-full object-cover"
-                    />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-1">Amit Dev</h3>
-                <p className="text-brand-blue text-sm font-medium">Website & Software Developer</p>
-                <p className="text-white/50 text-xs mt-1 tracking-wide">AI Automation · Google Expert · Full Stack</p>
-             </div>
+            <motion.div
+              animate={{ y: [0, -16, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+              className="relative aspect-video rounded-3xl overflow-hidden glass"
+            >
+               <img
+                 src="https://api.dareloop.app/background-image.png"
+                 alt="Amit Dev's Workspace"
+                 className="w-full h-full object-cover opacity-60 mix-blend-luminosity hover:opacity-80 transition-opacity"
+                 referrerPolicy="no-referrer"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" style={{ transform: "translateZ(20px)" }}></div>
+
+               {/* Mouse-follow glare */}
+               <motion.div
+                 className="absolute inset-0 pointer-events-none mix-blend-overlay"
+                 style={{ background: glareBackground, transform: "translateZ(40px)" }}
+               />
+
+               {/* Floating Mini Cards */}
+               <div
+                 className="absolute top-10 right-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px] shadow-2xl shadow-black/40"
+                 style={{ transform: "translateZ(80px)" }}
+               >
+                 <div className="flex items-center gap-3 mb-2">
+                   <div className="p-2 bg-yellow-500/20 text-yellow-500 rounded-lg"><Star size={18} className="fill-yellow-400" /></div>
+                   <div className="text-left">
+                     <p className="text-white font-bold text-lg leading-none">4.9 / 5</p>
+                     <p className="text-xs text-muted-foreground mt-0.5">Client Rating</p>
+                   </div>
+                 </div>
+                 <div className="flex gap-0.5 mt-1">
+                   {[...Array(5)].map((_, i) => (
+                     <div key={i} className={`h-1 rounded-full flex-1 ${i < 5 ? "bg-yellow-400" : "bg-white/10"}`} />
+                   ))}
+                 </div>
+                 <p className="text-[10px] text-muted-foreground mt-1.5">Based on 250+ projects</p>
+               </div>
+
+               <div
+                 className="absolute bottom-10 left-10 p-4 glass-dark rounded-2xl hidden md:block min-w-[160px] shadow-2xl shadow-black/40"
+                 style={{ transform: "translateZ(80px)" }}
+               >
+                 <div className="flex items-center gap-3 mb-2">
+                   <div className="p-2 bg-blue-500/20 text-blue-500 rounded-lg"><CheckCircle2 size={18} /></div>
+                   <div className="text-left">
+                     <p className="text-white font-bold text-lg leading-none">250+</p>
+                     <p className="text-xs text-muted-foreground mt-0.5">Projects Delivered</p>
+                   </div>
+                 </div>
+                 <div className="w-full bg-white/10 rounded-full h-1 mt-1">
+                   <div className="bg-brand-blue h-1 rounded-full w-[92%]" />
+                 </div>
+                 <p className="text-[10px] text-muted-foreground mt-1.5">92% on-time delivery rate</p>
+               </div>
+
+               <div
+                 className="absolute top-1/2 left-1/2 text-center pointer-events-none"
+                 style={{ transform: "translate(-50%, -50%) translateZ(110px)" }}
+               >
+                  <div className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-brand-blue/30 overflow-hidden mx-auto mb-4 bg-muted shadow-[0_0_50px_rgba(59,130,246,0.4)]">
+                      <img
+                        src="https://api.dareloop.app/amit-gupta-portfolio-2.png"
+                        alt="Amit Dev"
+                        className="w-full h-full object-cover"
+                      />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-1">Amit Dev</h3>
+                  <p className="text-brand-blue text-sm font-medium">Website & Software Developer</p>
+                  <p className="text-white/50 text-xs mt-1 tracking-wide">AI Automation · Google Expert · Full Stack</p>
+                  <span className="inline-block mt-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-white/40 text-[10px] tracking-widest uppercase backdrop-blur-sm">
+                    aka Bihar Wala Developer
+                  </span>
+               </div>
+            </motion.div>
           </div>
-          
+
           {/* Tags */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex flex-wrap justify-center gap-2 w-full">
             {["Laravel", "Android", "AI Automation", "API Design", "Full Stack"].map((tech) => (

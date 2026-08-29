@@ -20,9 +20,9 @@ export function TrustSection() {
   ];
 
   return (
-    <section className="py-20 relative border-y border-white/5 bg-white/[0.01]">
+    <section className="py-12 md:py-16 relative border-y border-white/5 bg-white/[0.01]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-10 mb-16 md:mb-20 opacity-60">
+        <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 md:gap-10 mb-10 md:mb-12 opacity-60">
           <p className="w-full text-center text-sm uppercase tracking-[0.2em] font-medium mb-4">Trusted By Businesses From</p>
           {countries.map((c) => (
             <div key={c.name} className="flex items-center gap-2.5 text-base font-medium px-4 py-2 rounded-xl hover:bg-white/5 transition-colors cursor-default">

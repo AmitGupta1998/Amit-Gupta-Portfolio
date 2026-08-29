@@ -31,7 +31,7 @@ export function OngoingProjects() {
   return (
     <section className="section-padding bg-gradient-to-b from-transparent to-brand-blue/5">
       <div className="container mx-auto px-4">
-        <div className="mb-16">
+        <div className="mb-10">
           <Badge variant="outline" className="mb-4 text-brand-blue border-brand-blue animate-pulse">In Development</Badge>
           <h2 className="font-display text-4xl font-bold text-white mb-4">Future in Progress</h2>
           <p className="text-muted-foreground">Current products and client work reaching completion soon.</p>

@@ -22,7 +22,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="section-padding bg-zinc-950">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12">
           <Badge className="mb-4">Solutions</Badge>
           <h2 className="font-display text-4xl md:text-6xl font-bold text-white mb-6">Premium Services</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto italic">
