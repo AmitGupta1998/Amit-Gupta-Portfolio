@@ -1,6 +1,7 @@
 import React from "react";
-import { Github, Linkedin, Youtube, Twitter, Heart, Facebook } from "lucide-react";
+import { Github, Linkedin, Youtube, Twitter, Heart, Facebook, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useVisitorCount } from "@/hooks";
 
 const socialLinks = [
   { Icon: Github, href: "https://github.com/AmitGupta1998", label: "GitHub" },
@@ -9,6 +10,30 @@ const socialLinks = [
   { Icon: Twitter, href: "https://x.com/AMIT5097", label: "X (Twitter)" },
   { Icon: Facebook, href: "https://www.facebook.com/codewithcode", label: "Facebook" },
 ];
+
+function VisitorCount() {
+  const { total, status } = useVisitorCount();
+
+  if (status === "error") return null;
+
+  return (
+    <p
+      className="text-sm text-muted-foreground flex items-center gap-2"
+      aria-live="polite"
+      aria-label={status === "ready" && total !== null ? `${total.toLocaleString()} visitors` : "Loading visitor count"}
+    >
+      <Users size={15} className="text-brand-blue" aria-hidden />
+      {status === "loading" || total === null ? (
+        <span className="inline-block h-4 w-20 rounded bg-white/10 animate-pulse" />
+      ) : (
+        <>
+          <span className="text-white font-medium tabular-nums">{total.toLocaleString()}</span>
+          <span>{total === 1 ? "visitor" : "visitors"}</span>
+        </>
+      )}
+    </p>
+  );
+}
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -97,9 +122,12 @@ export function Footer() {
         <Separator className="bg-white/5 mb-10" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} Developer Bihar wala. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} Developer Bihar wala. All rights reserved.
+            </p>
+            <VisitorCount />
+          </div>
           
           <div className="flex items-center gap-2 text-xs text-muted-foreground uppercase tracking-widest bg-white/5 px-4 py-2 rounded-full border border-white/5">
              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>

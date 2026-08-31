@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+export { useVisitorCount } from './useVisitorCount';
+
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
